@@ -1,14 +1,16 @@
 import React, { useState,useEffect } from 'react'
 import { View } from '@tarojs/components'
+import moment from 'moment'
 import { AtButton, AtList, AtListItem } from 'taro-ui'
 import SignalR from '../../utils/signalr'
-import moment from 'moment'
 import './index.scss'
 
 interface messageType{
   content:string
   time:string
 }
+
+const socket = new SignalR();
 
 const Index = ()=> {
   const [messageList,setMessageList] = useState<messageType[]>([])
@@ -17,7 +19,6 @@ const Index = ()=> {
     regSignalR()
   },[])
 
-  const socket = new SignalR();
   const regSignalR = async ()=>{
     await socket.connectSocket('https://localhost:5001/hub')
     socket.onMessage('receiveMessage',(content)=>{

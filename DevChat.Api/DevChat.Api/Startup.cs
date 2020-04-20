@@ -35,7 +35,7 @@ namespace DevChat.Api
             {
                 options.AddPolicy("default", builder =>
                 {
-                    builder.WithOrigins("http://192.168.0.107:10086").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                    builder.WithOrigins("http://localhost:8080").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
                 });
             });
         }

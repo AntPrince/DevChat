@@ -20,6 +20,7 @@ export default class SignalR {
   eventList: reciveMessageEvent[] = []
 
   constructor() {
+    console.log('SignalR实例化')
     return this
   }
 

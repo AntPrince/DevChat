@@ -6,6 +6,10 @@ module.exports = {
   },
   weapp: {},
   h5: {
-    esnextModules: ['taro-ui']
+    esnextModules: ['taro-ui'],
+    devServer: {
+      host:"localhost",
+      port: 8080
+    }
   }
 }

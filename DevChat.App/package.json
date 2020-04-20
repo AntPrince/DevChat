@@ -39,6 +39,8 @@
     "@tarojs/react": "3.0.0-beta.2",
     "@tarojs/runtime": "3.0.0-beta.2",
     "@tarojs/taro": "3.0.0-beta.2",
+    "hm-taro-friend-information-card": "^0.0.1",
+    "hm-taro-group-info-card": "^0.0.1",
     "moment": "^2.24.0",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",

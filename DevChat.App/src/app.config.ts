@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/friends/friends',
     'pages/index/index'
   ],
   window: {
