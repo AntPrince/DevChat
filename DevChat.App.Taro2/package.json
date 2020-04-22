@@ -29,6 +29,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@microsoft/signalr": "^3.1.3",
     "@tarojs/components": "2.1.5",
     "@tarojs/components-qa": "2.1.5",
     "@tarojs/router": "2.1.5",
@@ -41,7 +42,9 @@
     "@tarojs/taro-swan": "2.1.5",
     "@tarojs/taro-tt": "2.1.5",
     "@tarojs/taro-weapp": "2.1.5",
+    "@types/crypto-js": "^3.1.44",
     "babel-runtime": "^6.26.0",
+    "crypto-js": "^4.0.0",
     "hm-taro-friend-information-card": "^0.0.1",
     "hm-taro-information-card": "^0.0.1",
     "nerv-devtools": "^1.5.5",

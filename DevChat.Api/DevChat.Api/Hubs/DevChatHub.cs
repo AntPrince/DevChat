@@ -10,8 +10,8 @@ namespace DevChat.Api.Hubs
     {
         public async Task SendMessage(string message)
         {
-            await Clients.All.SendAsync("receiveMessage",message);
-            Console.WriteLine("API接收到消息 :" + message);
+            Console.WriteLine("API接收到消息 :【" + message + "】,并回复【" + message+"?】");
+            await Clients.All.SendAsync("receiveMessage",message+"吗?");
         }
     }
 }

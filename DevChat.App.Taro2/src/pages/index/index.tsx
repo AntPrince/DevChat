@@ -2,12 +2,31 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
 import HmFriendInformationCard from '../../comp/drifting-bottle/index'
+import CryptoJS from 'crypto-js'
+
+import * as S from '@microsoft/signalr'
 
 export default class Index extends Component {
 
   componentWillMount () { }
 
-  componentDidMount () { }
+  componentDidMount () { 
+    const s = new S.HubConnectionBuilder().withUrl("http://192.168.0.107:5002/hub").build();
+    s.start().then(function () {
+  }).catch(function (err) {
+      return console.error(err.toString());
+  });
+    const str = 'hahaha'
+    const key = CryptoJS.enc.Utf8.parse("11111111111111111111111111111111");  //十六位十六进制数作为密钥
+    const iv = CryptoJS.enc.Utf8.parse('2222222222222222');   //十六位十六进制数作为密钥偏移量
+
+    const encrypted = CryptoJS.DES.encrypt(str, key, { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
+    const enc = encrypted.ciphertext
+    const base64 = CryptoJS.enc.Base64.stringify(enc)
+    console.log(base64)
+
+
+  }
 
   componentWillUnmount () { }
 

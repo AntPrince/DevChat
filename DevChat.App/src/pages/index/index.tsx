@@ -20,7 +20,7 @@ const Index = ()=> {
   },[])
 
   const regSignalR = async ()=>{
-    await socket.connectSocket('https://localhost:5001/hub')
+    await socket.connectSocket('https://192.168.0.107:5002/hub')
     socket.onMessage('receiveMessage',(content)=>{
       const now = moment().format("HH:mm:ss")
       setMessageList(x=>x.concat({content:content,time:now}))
